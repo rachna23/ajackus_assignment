@@ -4,16 +4,15 @@
 
 
 
-  alert(1)
   
     /*==================================================================
     [ Validate ]*/
     var input = $('.validate-input .input100');
 
-    alert(1)
 
     $('.validate-form').on('submit',function(){
         var check = true;
+        alert(11)
 
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
