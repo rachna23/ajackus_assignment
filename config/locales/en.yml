@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  views:
+    contact:
+      new:
+        title: Send Us A Message
+        full_address: Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+        name: Tell us your name *
+        email: Enter your email *
+        phone: Enter phone number *
+        message: Message *
+        send_message: Send message

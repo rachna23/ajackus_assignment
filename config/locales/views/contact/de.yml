@@ -1,19 +1,17 @@
 de:
   views:
-    show: Anzeigen
-    edit: Editieren
-    destroy: Löschen
-    are_you_sure: Sind Sie sicher?
-    back: Zurück
-    edit: Editieren
     contact:
-      index:
-        title: Liste aller Produkte
-        new_product: Neues Produkt
-      edit:
-        title: Produkt editieren
       new:
-        title: Neues conttttt
+        title: Zend ons een bericht
+        address: Adres
+        full_address: Mada Center 8e verdieping, 379 Hudson St, New York, NY 10018 VS
+        lets_talk: laten we praten
+        general_support: Algemene ondersteuning
+        name: Vertel ons uw naam *
+        email: Voer uw e-mailadres in *
+        phone: Voer telefoonnummer in *
+        message: Bericht *
+        send_message: bericht versturen
       flash_messages:
         product_was_successfully_created: 'Das Produkt wurde erfolgreich angelegt.'
         product_was_successfully_updated: 'Das Produkt wurde erfolgreich aktualisiert.'

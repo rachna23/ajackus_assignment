@@ -7,16 +7,13 @@
 </head>
 <body>
 
-
 	<div class="container-contact100">
 		<div class="wrap-contact100">
 			<%= form_for @contact, builder: CustomBuilder, html: {class: "contact100-form validate-form"} do |f| %>
 				<span class="contact100-form-title">
-					Send Us A Message
 					<%= t 'views.contact.new.title' %>
-					<%= I18n.locale %>
 				</span>
-				<label class="label-input100" for="first-name">Tell us your name *</label>
+				<label class="label-input100" for="first-name"><%= t 'views.contact.new.name' %></label>
 				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
 					<%= f.inputbox_field :first_name %>
 					<span class="focus-input100"></span>
@@ -26,26 +23,26 @@
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="email">Enter your email *</label>
+				<label class="label-input100" for="email"><%= t 'views.contact.new.email' %></label>
 				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 					<%= f.email :email %>
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="phone">Enter phone number</label>
+				<label class="label-input100" for="phone"><%= t 'views.contact.new.phone' %></label>
 				<div class="wrap-input100">
 					<%= f.input_phone_field :phone %>
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="message">Message *</label>
+				<label class="label-input100" for="message"><%= t 'views.contact.new.message' %></label>
 				<div class="wrap-input100 validate-input" data-validate = "Message is required">
 					<%= f.input_text_field :message %>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="container-contact100-form-btn">
-					<%= f.submit "Send Message", class: "contact100-form-btn" %>
+					<%= f.submit  I18n.t('views.contact.new.send_message'),  :class => "contact100-form-btn" %>
 				</div>
 			<% end %>
 
@@ -57,11 +54,11 @@
 
 					<div class="flex-col size2">
 						<span class="txt1 p-b-20">
-							Address
+							<%= t 'views.contact.new.address' %>
 						</span>
 
 						<span class="txt2">
-							Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+							<%= t 'views.contact.new.full_address' %>
 						</span>
 					</div>
 				</div>
@@ -73,7 +70,7 @@
 
 					<div class="flex-col size2">
 						<span class="txt1 p-b-20">
-							Lets Talk
+							<%= t 'views.contact.new.lets_talk' %>
 						</span>
 
 						<span class="txt3">
@@ -89,7 +86,7 @@
 
 					<div class="flex-col size2">
 						<span class="txt1 p-b-20">
-							General Support
+							<%= t 'views.contact.new.general_support' %>
 						</span>
 
 						<span class="txt3">
