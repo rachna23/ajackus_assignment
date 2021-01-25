@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>AjackusAssignment</title>
+  <html>
+    <head>
+    <title><%= I18n.t('contact_v17') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-        <p>
-<%= link_to_unless I18n.locale == :en, "English", locale: :en %>
-|
-<%= link_to_unless I18n.locale == :de, "Deutsch", locale: :de %>
-</p>
-    </p>
-  </body>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <body>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <%= yield %>
+    </body>
 </html>

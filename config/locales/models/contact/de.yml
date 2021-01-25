@@ -1,9 +1,20 @@
 # ruby encoding: utf-8
-
 de:
   activerecord:
-    models:
-      contact: 'contactss'
-    attributes:
-      contact:
-        first_name: 'Nameffff'
+    errors:
+      models:
+        contact:
+          attributes:
+            first_name:
+              blank: voornaam mag niet leeg zijn
+            last_name:
+              blank: achternaam mag niet leeg zijn
+            email:
+              blank: e-mail mag niet leeg zijn
+              please_enter_correct_formate: voer het juiste formaat in
+            phone:
+              blank: telefoon mag niet leeg zijn
+              not_a_number: geen nummer
+              too_short: te kort
+            message:
+              blank: bericht mag niet leeg zijn

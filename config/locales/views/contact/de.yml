@@ -1,7 +1,15 @@
 de:
+  contact_v17: Neem contact op met V17
+  new_inquery_email: nieuwe aanvraag-e-mail
+  first_name: Voornaam
+  email: Voer uw e-mailadres in
+  phone: Voer telefoonnummer in
   views:
     contact:
       new:
+        first_name: Voornaam
+        last_name: achternaam
+        write_message: Schrijf ons een bericht
         title: Zend ons een bericht
         address: Adres
         full_address: Mada Center 8e verdieping, 379 Hudson St, New York, NY 10018 VS
@@ -12,6 +20,10 @@ de:
         phone: Voer telefoonnummer in *
         message: Bericht *
         send_message: bericht versturen
+        type_first_name: fgfgffgf
       flash_messages:
-        product_was_successfully_created: 'Das Produkt wurde erfolgreich angelegt.'
-        product_was_successfully_updated: 'Das Produkt wurde erfolgreich aktualisiert.'
+  controllers:
+    contacts:
+      create:
+        flash:
+          notice: "Het contact is succesvol gemaakt."

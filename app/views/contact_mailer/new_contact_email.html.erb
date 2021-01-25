@@ -4,16 +4,16 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p>You got a new order from <%= @contact.first_name %>!</p>
+    <p>You got a new inquery from <%= @contact.first_name %>!</p>
     <p>
-    Order details<br>
+    Contact details<br>
     --------------------------
     </p>
-    <p>Name: <%= @contact.first_name %></p>
-    <p>Email: <%= @contact.email %></p>
-    <p>Phone: <%= @contact.phone %></p>
+    <p> <%=  t(:first_name) %>: <%= @contact.first_name %></p>
+    <p> <%= t(:email) %>: <%= @contact.email %></p>
+    <p> <%= t(:phone) %>: <%= @contact.phone %></p>
     <p>
-    Message:<br>
+    <%= t(:message) %><br>
     ----------
     </p>
     <p><%= @contact.message %></p>

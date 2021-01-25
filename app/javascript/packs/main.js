@@ -1,3 +1,4 @@
+ $(document).ready(function() {
 
 (function ($) {
     "use strict";
@@ -8,11 +9,11 @@
     /*==================================================================
     [ Validate ]*/
     var input = $('.validate-input .input100');
-
-
+   
+   
     $('.validate-form').on('submit',function(){
         var check = true;
-        alert(11)
+        alert("main")
 
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
@@ -58,3 +59,5 @@
     
 
 })(jQuery);
+
+});

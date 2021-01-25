@@ -1,123 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Contact V17</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+<div class="container-contact100">
+	<div class="wrap-contact100">
+		<%= form_for @contact, builder: CustomBuilder, html: {class: "contact100-form validate-form"} do |f| %>
+			<span class="contact100-form-title">
+				<%= t 'views.contact.new.title' %><br/>
+				  <h5>Select language</h5>
+				  <%= link_to 'Deutsch', root_path(locale: :de) %>
+          <%= link_to 'English', root_path(locale: :en) %>
+			</span>
 
-	<div class="container-contact100">
-		<div class="wrap-contact100">
-			<%= form_for @contact, builder: CustomBuilder, html: {class: "contact100-form validate-form"} do |f| %>
-				<span class="contact100-form-title">
-					<%= t 'views.contact.new.title' %>
-				</span>
-				<label class="label-input100" for="first-name"><%= t 'views.contact.new.name' %></label>
-				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-					<%= f.inputbox_field :first_name %>
-					<span class="focus-input100"></span>
-				</div>
-				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-					<%= f.inputbox_lfield :last_name %>
-					<span class="focus-input100"></span>
-				</div>
+			<label class="label-input100" for="first-name">
+				<%= t 'views.contact.new.name' %>
+			</label>
+			<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
+				<%= f.inputbox_field :first_name %>
+				<%= f.error_message_for(:first_name) %>
+				<span class="focus-input100"> </span>
+			</div>
 
-				<label class="label-input100" for="email"><%= t 'views.contact.new.email' %></label>
-				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<%= f.email :email %>
-					<span class="focus-input100"></span>
-				</div>
+			<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
+				<%= f.inputbox_lfield :last_name %>
+				<%= f.error_message_for(:first_name) %>
+				<span class="focus-input100"></span>
+			</div>
 
-				<label class="label-input100" for="phone"><%= t 'views.contact.new.phone' %></label>
-				<div class="wrap-input100">
-					<%= f.input_phone_field :phone %>
-					<span class="focus-input100"></span>
-				</div>
+			<label class="label-input100" for="email">
+				<%= t 'views.contact.new.email' %>
+			</label>
+			<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+				<%= f.email :email %>
+				<%= f.error_message_for(:email) %>
+				<span class="focus-input100"></span>
+			</div>
 
-				<label class="label-input100" for="message"><%= t 'views.contact.new.message' %></label>
-				<div class="wrap-input100 validate-input" data-validate = "Message is required">
-					<%= f.input_text_field :message %>
-					<span class="focus-input100"></span>
-				</div>
+			<label class="label-input100" for="phone">
+				<%= t 'views.contact.new.phone' %>
+			</label>
+			<div class="wrap-input100">
+				<%= f.input_phone_field :phone %>
+				<%= f.error_message_for(:phone) %>
+				<span class="focus-input100"></span>
+			</div>
 
-				<div class="container-contact100-form-btn">
-					<%= f.submit  I18n.t('views.contact.new.send_message'),  :class => "contact100-form-btn" %>
-				</div>
-			<% end %>
+			<label class="label-input100" for="message">
+				<%= t 'views.contact.new.message' %>
+			</label>
+			<div class="wrap-input100 validate-input" data-validate = "Message is required">
+				<%= f.input_text_field :message %>
+				<%= f.error_message_for(:first_name) %>
+				<span class="focus-input100"></span>
+			</div>
 
-			<div class="contact100-more flex-col-c-m" style="background-image: url(<%= asset_path 'bg-01.jpg' %>">
-				<div class="flex-w size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-map-marker"></span>
-					</div>
+			<div class="container-contact100-form-btn">
+				<%= f.submit  I18n.t('views.contact.new.send_message'),  :class => "contact100-form-btn" %>
+			</div>
+		<% end %>
 
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							<%= t 'views.contact.new.address' %>
-						</span>
-
-						<span class="txt2">
-							<%= t 'views.contact.new.full_address' %>
-						</span>
-					</div>
-				</div>
-
-				<div class="dis-flex size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-phone-handset"></span>
-					</div>
-
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							<%= t 'views.contact.new.lets_talk' %>
-						</span>
-
-						<span class="txt3">
-							+1 800 1236879
-						</span>
-					</div>
+		<div class="contact100-more flex-col-c-m" style="background-image: url(<%= asset_path 'bg-01.jpg' %>">
+			<div class="flex-w size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-map-marker" aria-hidden="true"></span>
+					<!--<i class="fa fa-map-marker" aria-hidden="true"></i>-->
 				</div>
 
-				<div class="dis-flex size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-envelope"></span>
-					</div>
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						<%= t 'views.contact.new.address' %>
+					</span>
 
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
-							<%= t 'views.contact.new.general_support' %>
-						</span>
+					<span class="txt2">
+						<%= t 'views.contact.new.full_address' %>
+					</span>
+				</div>
+			</div>
 
-						<span class="txt3">
-							contact@example.com
-						</span>
-					</div>
+			<div class="dis-flex size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-phone-handset"></span>
+				</div>
+
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						<%= t 'views.contact.new.lets_talk' %>
+					</span>
+
+					<span class="txt3">
+						+1 800 1236879
+					</span>
+				</div>
+			</div>
+
+			<div class="dis-flex size1 p-b-47">
+				<div class="txt1 p-r-25">
+					<span class="lnr lnr-envelope"></span>
+				</div>
+
+				<div class="flex-col size2">
+					<span class="txt1 p-b-20">
+						<%= t 'views.contact.new.general_support' %>
+					</span>
+
+					<span class="txt3">
+						contact@example.com
+					</span>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
-	<div id="dropDownSelect1"></div>
-
-<!--===============================================================================================-->
-	<script>
-		//$(".selection-2").select2({
-		//	minimumResultsForSearch: 20,
-			//dropdownParent: $('#dropDownSelect1')
-		//});
-	</script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-23581568-13');
-	</script>
-</body>
-</html>
+</div>

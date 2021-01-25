@@ -1,25 +1,23 @@
+#Contact controller
 class ContactsController < ApplicationController
+  respond_to :html
 
-	def new
+  def new
     @contact = Contact.new
-  end
-
-  def index
   end
 
   def create
     @contact = Contact.new(contact_params)
-    respond_to do |format|
-      if @contact.save
-        ContactMailer.new_contact_email(@contact).deliver
-        format.html { redirect_to new_contact_path, notice: 'Contact was successfully created.' }
-        format.json { render :show, status: :created, location: @contact }
-      else
-        format.html { render :new }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
-      end
-    end
+    if @contact.save
+      flash[:notice] = t('controllers.contacts.create.flash.notice')
+      send_email
+    end 
+    respond_with(@contact, location: new_contact_path)
   end
+
+  def send_email
+    ContactMailer.new_contact_email(@contact).deliver
+  end 
 
   private
 

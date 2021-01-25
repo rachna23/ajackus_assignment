@@ -6,6 +6,16 @@
 [ FONT ]*/
 
 @font-face {
+  font-family: Font Awesome;
+  src: asset-url('fonts/font-awesome-4.7.0/fonts');
+}
+
+@font-face {
+  font-family: Font Awesome;
+  src: asset-url('fonts/font-awesome-4.7.0/css/font-awesome.css');
+}
+
+@font-face {
   font-family: Poppins-Regular;
   src: asset-url('fonts/poppins/Poppins-Regular.ttf');
 }
@@ -13,7 +23,6 @@
 @font-face {
   font-family: Poppins-Medium;
   src: asset-url('fonts/poppins/Poppins-Medium.ttf');
-
 }
 
 @font-face {
@@ -30,6 +39,7 @@
   font-family: Montserrat-Bold;
   src: asset-url('fonts/montserrat/Montserrat-Bold.ttf');
 }
+
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
