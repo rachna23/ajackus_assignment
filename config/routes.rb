@@ -3,6 +3,6 @@ Rails.application.routes.draw do
     root :to => 'contacts#new'
     resources :contacts, only: [:new, :create]
   end
-  get 'en/contacts', to:  redirect('contacts#new')
-  get 'de/contacts', to:  redirect('contacts#new')
+  get 'en/contacts', to:  redirect('/')
+  get 'de/contacts', to:  redirect('/')
 end

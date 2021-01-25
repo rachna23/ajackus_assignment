@@ -12,6 +12,7 @@ de:
             email:
               blank: e-mail mag niet leeg zijn
               please_enter_correct_formate: voer het juiste formaat in
+              taken: e-mail is al in gebruik
             phone:
               blank: telefoon mag niet leeg zijn
               not_a_number: geen nummer
