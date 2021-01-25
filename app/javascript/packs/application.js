@@ -7,12 +7,9 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-
-
+require("packs/jquery-3.2.1.min.js")
+require("packs/main.js")
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
-require("packs/jquery-3.2.1.min.js")
-require("packs/main.js")

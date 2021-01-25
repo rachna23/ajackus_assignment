@@ -13,7 +13,6 @@
    
     $('.validate-form').on('submit',function(){
         var check = true;
-        alert("main")
 
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
