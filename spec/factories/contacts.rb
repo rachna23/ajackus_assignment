@@ -7,9 +7,7 @@ FactoryGirl.define do
     message     {"This is testing"}
   end
 
-factory :invalid_contact, parent: :contact do |f|
-  f.first_name nil
-end
-
-
+  factory :invalid_contact, parent: :contact do |f|
+    f.first_name nil
+  end
 end
